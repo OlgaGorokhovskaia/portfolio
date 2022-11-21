@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation Page</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <nav id="navbar">
+      <header id="title">Sass Tutorial</header>
+      <a class="nav-link" href="#Introduction">Introduction</a>
+      <a class="nav-link" href="#Installation">Installation</a>
+      <a class="nav-link" href="#Variables">Variables</a>
+      <a class="nav-link" href="#Nested_Rules_and_Properties">Nested Rules and Properties</a>
+      <a class="nav-link" href="#@import_and_Partials">@import and Partials</a>
+      <a class="nav-link" href="#@mixin_and_@include">@mixin and @include</a>
+      <a class="nav-link" href="#@extend_and_Inheritance">@extend and Inheritance</a>
+      <a class="nav-link" href="#Reference">Reference</a>
+    </nav>
+    <main id="main-doc">
+      <section id="Introduction" class="main-section">
+        <header>Introduction</header>
+        <div class="description">
+          <h3>What is Sass?</h3>
+          <ul>
+            <li>Sass stands for <b>S</b>yntactically <b>A</b>wesome <b>S</b>tyle<b>s</b>heet.</li>
+            <li>Sass is an extension to CSS.</li>
+            <li>Sass is a CSS pre-processor.</li>
+            <li>Sass is completely compatible with all versions of CSS.</li>
+            <li>Sass reduces repetition of CSS and therefore saves time.</li>
+            <li>Sass was designed by Hampton Catlin and developed by Natalie Weizenbaum in 2006.</li>
+            <li>Sass is free to download and use.</li>
+          </ul>
+        </div>
+        <div class="description">
+          <h3>Why Use Sass?</h3>
+<p>Stylesheets are getting larger, more complex, and harder to maintain. This is where a CSS pre-processor can help.</p>
+<p>Sass lets you use features that do not exist in CSS, like variables, nested rules, mixins, imports, inheritance, built-in functions, and other stuff.</p>
+        </div>
+        <div class="description">
+          <h3>A Simple Example why Sass is Useful</h3>
+<p>How many times do you need to type HEX values? A LOT of times. And what about variations of the same colors?</p>
+<p>Instead of typing the above values a lot of times, you can use Sass and write this:</p>
+<div>
+        <code>
+          <span class="css-comment"> /* define variables for the primary colors */</span><br/>
+          <span class='css-selector'>
+            $primary_1: #a2b9bc;<br/>
+            $primary_2: #b2ad7f;<br/>
+            $primary_3: #878f99;<br/>
+          </span><br/>
+          <span class='css-comment'> /* use the variables */</span><br/>
+          <span class='css-selector'>.main-header</span> {<br/>
+          &nbsp;&nbsp;<span class='css-property'>background-color</span>: <span class='css-property-value'>$primary_1</span>;<br/>
+          }<br/>
+          <span class='css-selector'>.menu-left</span> {<br/>
+          &nbsp;&nbsp;<span class='css-property'>background-color</span>: <span class='css-property-value'>$primary_2</span>;<br/>
+          }<br/>
+          <span class='css-selector'>.menu-right</span> {<br/>
+          &nbsp;&nbsp;<span class='css-property'>background-color</span>: <span class='css-property-value'>$primary_3</span>;<br/>
+          }<br/>
+        </code>
+        <p>So, when using Sass, and the primary color changes, you only need to change it in one place.</p>
+        </div>
+        <div class='description'>
+          <h3>How Does Sass Work?</h3>
+          <p>A browser does not understand Sass code. Therefore, you will need a Sass pre-processor to convert Sass code into standard CSS.</p>
+          <p>This process is called transpiling. So, you need to give a transpiler (some kind of program) some Sass code and then get some CSS code back.</p>
+        </div>
+        <div class='description'>
+          <h3>Sass File Type</h3>
+          <p>Sass files has the <b>".scss"</b> file extension.</p>
+        </div>
+      </section>
+      <section id="Installation" class="main-section">
+        <header>Installation</header>
+        <div class="description">
+          <h3>System Requirements for Sass</h3>
+          <ul>
+            <li>Operating system - Sass is platform independent.</li>
+            <li>Browser support - Sass works in Edge/IE (from IE 8), Firefox, Chrome, Safari, Opera.</li>
+            <li>Programming language - Sass is based on Ruby.</li>
+          </ul>
+        </div>
+        <div class="description">
+          <h3>Official Sass Web Site</h3>
+          <p>Read more about Sass at the official Sass web site: <a href="https://sass-lang.com">https://sass-lang.com</a></p>
+        </div>
+        <div class="description">
+          <h3>Install Sass</h3>
+          <p>There are several ways to install Sass in your system. There are many applications that will get you up and running with Sass in a few minutes for Mac, Windows, and Linux. Some of these are free, but some are paid apps.</p>
+          <p>You can read more about them here: <a href="https://sass-lang.com">https://sass-lang.com/install</a></p>
+        </div>
+      </section>
+      <section id="Variables" class="main-section">
+        <header>Variables</header>
+        <div class="description">
+          <h3>Sass Variables</h3>
+          <p>Variables are a way to store information that you can re-use later.</p>
+          <p>With Sass, you can store information in variables, like:</p>
+          <ul>
+            <li>strings</li>
+            <li>numbers</li>
+            <li>colors</li>
+            <li>booleans</li>
+            <li>lists</li>
+            <li>nulls</li>
+          </ul>
+          <p>Sass uses the $ symbol, followed by a name, to declare variables:</p>
+          <code>
+            <span class='css-selector'>
+              $myFont: Helvetica, sans-serif;<br/>
+              $myColor: red;<br/>
+              $myFontSize: 18px;<br/>
+              $myWidth: 680px;<br/>
+            </span><br/>
+            <span class='css-selector'>body</span> {<br/>
+            &nbsp;&nbsp;<span class='css-property'>font-family</span>: <span class='css-property-value'>$myFont</span>;<br/>
+            &nbsp;&nbsp;<span class='css-property'>font-size</span>: <span class='css-property-value'>$myFontSize</span>;<br/>
+            &nbsp;&nbsp;<span class='css-property'>color</span>: <span class='css-property-value'>$myColor</span>;<br/>
+            }<br/>
+            <span class='css-selector'>div</span> {<br/>
+            &nbsp;&nbsp;<span class='css-property'>width</span>: <span class='css-property-value'>$myWidth</span>;<br/>
+            }<br/>
+          </code>
+        </div>
+        <div class="description">
+          <h3>Variable Scope</h3>
+          <p>Sass variables are only available at the level of nesting where they are defined.</p>
+        </div>
+        <div class="description">
+          <h3>Using Sass !global</h3>
+          <p>The default behavior for variable scope can be overridden by using the <b>!global</b> switch.</p>
+          <p><b>!global</b> indicates that a variable is global, which means that it is accessible on all levels.</p>
+          <p>Look at the following example (same as above; but with <b>!global</b> added):</p>
+          <code>
+            <span class='css-selector'>$myColor: red;</span><br/><br/>
+            <span class='css-selector'>h1</span> {<br/>
+            &nbsp;&nbsp;<span class='css-property'>$myColor</span>: <span class='css-property-value'>green !global</span>;<br/>
+            &nbsp;&nbsp;<span class='css-property'>color</span>: <span class='css-property-value'>$myColor</span>;<br/>
+            }<br/>
+            <span class='css-selector'>p</span> {<br/>
+            &nbsp;&nbsp;<span class='css-property'>color</span>: <span class='css-property-value'>$myColor</span>;<br/>
+            }<br/>
+          </code>
+          <p>Now the color of the text inside both tags will be green!</p>
+        </div>
+      </section>
+      <section id="Nested_Rules_and_Properties" class="main-section">
+        <header >Nested Rules and Properties</header>
+        <div class="description">
+          <h3>Nested Rules</h3>
+          <p>Sass lets you nest CSS selectors in the same way as HTML.</p>
+          <p>Look at an example of some Sass code for a site's navigation:</p>
+          <code>
+            <span class='css-selector'>nav</span> {</br>
+            &nbsp;&nbsp;<span class='css-selector'>ul</span> {</br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class='css-property'>margin</span>: <span class='css-property-value'>0</span>;<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class='css-property'>padding</span>: <span class='css-property-value'>0</span>;<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class='css-property'>list-style</span>: <span class='css-property-value'>none</span>;<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class='css-selector'>li</span> {</br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='css-property'>display</span>: <span class='css-property-value'>inline-block</span>;<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;}<br/></br>
+            &nbsp;&nbsp;<span class='css-selector'>a</span> {</br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class='css-property'>text-decoration</span>
+            <span class='css-property-value'>none</span>;<br/>
+            &nbsp;&nbsp;}<br/>
+            }<br/>
+          </code>
+          <p>Notice that in Sass, the <b>ul</b>, <b>li</b>, and <b>a</b> selectors are nested inside the <b>nav</b> selector.</p>
+        </div>
+        <div class="description">
+          <h3>Nested Properties</h3>
+          <p>Many CSS properties have the same prefix, like font-family, font-size and font-weight or text-align, text-transform and text-overflow.</p>
+          <p>With Sass you can write them as nested properties:
+
+</p>
+          <code>
+            <span class='css-selector'>font:</span> {</br>
+            &nbsp;&nbsp;<span class='css-property'>family</span>: <span class='css-property-value'>Helvetica, sans-serif</span>;<br/>
+            &nbsp;&nbsp;<span class='css-property'>size</span>: <span class='css-property-value'>18px</span>;<br/>
+            &nbsp;&nbsp;<span class='css-property'>weight</span>: <span class='css-property-value'>bold</span>;<br/>
+            }<br/><br/>
+            <span class='css-selector'>text:</span> {</br>
+            &nbsp;&nbsp;<span class='css-property'>align</span>: <span class='css-property-value'>Helvetica, sans-serif</span>;<br/>
+            &nbsp;&nbsp;<span class='css-property'>transform</span>: <span class='css-property-value'>18px</span>;<br/>
+            &nbsp;&nbsp;<span class='css-property'>overflow</span>: <span class='css-property-value'>hidden</span>;<br/>
+            }<br/>
+          </code>
+        </div>
+      </section>
+       <section id="@import_and_Partials" class="main-section">
+        <header>@import and Partials</header>
+        <div class="description">
+          <p>Sass keeps the CSS code <b>DRY</b> (Don't Repeat Yourself). One way to write DRY code is to keep related code in separate files.</p>
+          <p>You can create small files with CSS snippets to include in other Sass files. Examples of such files can be: reset file, variables, colors, fonts, font-sizes, etc. </p>
+          <h3>Importing Files</h3>
+          <p>Just like CSS, Sass also supports the <b>@import</b> directive.</p>
+          <p>The <b>@import</b> directive allows you to include the content of one file in another.</p>
+          <p>The CSS <b>@import</b> directive has a major drawback due to performance issues; it creates an extra HTTP request each time you call it. However, the Sass <b>@import</b> directive includes the file in the CSS; so no extra HTTP call is required at runtime!</p>
+          <code>@import <i>filename</i>;</code>
+          <p> You do not need to specify a file extension, Sass automatically assumes that you mean a .sass or .scss file. You can also import CSS files. The <b>@import</b> directive imports the file and any variables or mixins defined in the imported file can then be used in the main file.</p>
+          <p>It is normal to add the @import directive at the top of a file; this way its content will have a global scope:</p>
+        </div>
+      </section>
+      <section id="@mixin_and_@include" class="main-section">
+        <header>@mixin and @include</header>
+        <div class="description">
+          <h3>Sass Mixins</h3>
+          <p>The <b>@mixin</b> directive lets you create CSS code that is to be reused throughout the website.</p>
+          <p>The <b>@include</b> directive is created to let you use (include) the mixin.</p>
+        </div>
+        <div class="description">
+          <h3>Defining a Mixin</h3>
+          <p>A mixin is defined with the <b>@mixin</b> directive.</p>
+          <p>The <b>@include</b> directive is created to let you use (include) the mixin.</p>
+          <code>
+            <span class='css-selector'>@mixin name</span> {</br>
+            &nbsp;&nbsp;<span class='css-property'>property</span>: <span class='css-property-value'>value</span>;<br/>
+            &nbsp;&nbsp;<span class='css-property'>property</span>: <span class='css-property-value'>value</span>;<br/>
+            &nbsp;&nbsp;...<br/>
+            }<br/>
+          </code>
+        </div>
+         <div class="description">
+          <h3>Using a Mixin</h3>
+          <p>The <b>@include</b> directive is used to include a mixin.</p>
+          <code>
+<span class='css-selector'>selector</span> {</br>
+            &nbsp;&nbsp;<span class='css-property'>@include mixin-name</span>;<br/>
+            }<br/>
+          </code>
+          <div class="description">
+          <h3>Passing Variables to a Mixin</h3>
+          <p>Mixins accept arguments. This way you can pass variables to a mixin.</p>
+          <p>Here is how to define a mixin with arguments:</p>
+          <code>
+            <span class='css-comment'>/* Define mixin with two arguments */</span><br/>
+            <span class='css-selector'>@mixin bordered($color, $width)</span> {</br>
+            &nbsp;&nbsp;<span class='css-property'>border</span>:</span>: <span class='css-property-value'>$width solid $color</span>;<br/>
+            }<br/>
+            <span class='css-selector'>.myArticle</span> {</br>
+            &nbsp;&nbsp;<span class='css-property'>@include bordered(blue, 1px)</span>;  <span class='css-comment'>// Call mixin with two values</span><br/>
+            }<br/>
+            <span class='css-selector'>.myNotes</span> {</br>
+            &nbsp;&nbsp;<span class='css-property'>@include bordered(red, 1px)</span>;  <span class='css-comment'>// Call mixin with two values</span><br/>
+            }<br/>
+          </code>
+          <p>Notice that the arguments are set as variables and then used as the values (color and width) of the border property.</p>
+        </div>
+      </section>
+      <section id="@extend_and_Inheritance" class="main-section">
+        <header>@extend and Inheritance</header>
+        <div class="description">
+          <h3>Sass @extend Directive</h3>
+          <p>The <b>@extend</b> directive lets you share a set of CSS properties from one selector to another.</p>
+          <p>The <b>@extend</b> directive is useful if you have almost identically styled elements that only differ in some small details.</p>
+          <p>The following Sass example first creates a basic style for buttons (this style will be used for most buttons). Then, we create one style for a "Report" button and one style for a "Submit" button. Both "Report" and "Submit" button inherit all the CSS properties from the .button-basic class, through the <b>@extend</b> directive. In addition, they have their own colors defined:</p>
+          <code>
+            <span class='css-selector'>.button-basic</span> {</br>
+            &nbsp;&nbsp;<span class='css-property'>border</span>: <span class='css-property-value'>none</span>;<br/>
+            &nbsp;&nbsp;<span class='css-property'>text-align</span>: <span class='css-property-value'>center</span>;<br/>
+            &nbsp;&nbsp;<span class='css-property'>padding</span>: <span class='css-property-value'>15px 30px</span>;<br/>
+            &nbsp;&nbsp;<span class='css-property'>font-size</span>: <span class='css-property-value'>16px</span>;<br/>
+            &nbsp;&nbsp;<span class='css-property'>cursor</span>: <span class='css-property-value'>pointer</span>;<br/>
+            }<br/><br/>
+            <span class='css-selector'>.button-report</span> {<br/>
+            &nbsp;&nbsp;<span class='css-property'>@extend .button-basic</span>;<br/>
+            &nbsp;&nbsp;<span class='css-property'>background-color</span>: <span class='css-property-value'>red</span>;<br/>
+            }<br/><br/>
+            <span class='css-selector'>.button-submit</span> {<br/>
+            &nbsp;&nbsp;<span class='css-property'>@extend .button-basic</span>;<br/>
+            &nbsp;&nbsp;<span class='css-property'>background-color</span>: <span class='css-property-value'>green</span>;<br/>
+            }<br/>
+          </code>
+          <p>By using the @extend directive, you do not need to specify several classes for an element in your HTML code. You just need to specify .button-report to get both sets of styles.</p>
+          <p>The <b>@extend</b> directive helps keep your Sass code very DRY.</p>
+        </div>
+      </section>
+      <section id="Reference" class="main-section">
+        <header>Reference</header>
+        <p>All the documentation in this page is taken from <a href="https://www.w3schools.com/sass/">https://www.w3schools.com/sass/</a></p>
+      </section>
+    </main> 
+  </body>
+</html>

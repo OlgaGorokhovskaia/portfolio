@@ -1,0 +1,107 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: sans-serif;
+  }
+  
+  #navbar {
+    width: 298px;
+    height: 100%;
+    border-right: 2px solid #333;
+    position: fixed;
+    top: 0;
+    overflow-x: scroll;
+    background: #fff;
+  }
+  
+  #title {
+    font-size: 1.6rem;
+    padding: 10px 15px;
+  }
+  
+  .nav-link {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 2px solid #333;
+  }
+  
+  .nav-link:last-of-type {
+    border-bottom: none;
+  }
+  
+  .nav-link:hover {
+    color: #4CAF50;
+  }
+  
+  a:not(.nav-link) {
+    color: #4CAF50;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  #main-doc {
+    margin-left: 300px;
+  }
+  
+  header:not(#title) {
+    font-size: 2rem;
+  }
+  
+  .main-section {
+    padding: 10px 15px;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    #navbar {
+      width: 100%;
+      height: 180px;
+      border-right: none;
+      border-bottom: 2px solid #333;
+      overflow-y: scroll;
+    }
+  
+    .nav-link {
+      display: block;
+      padding: 10px 15px;
+    }
+  
+    #main-doc {
+      margin-left: 0;
+      margin-top: 180px;
+    }
+  }
+  
+  ul > li {
+    margin-bottom: 0.4rem;
+  }
+  
+  code {
+    display: block;
+    max-width: 900px;
+    background-color: #e4ecf4;
+    padding: 20px 15px;
+  }
+  
+  .css-comment {
+    color: #1f8023;
+  }
+  
+  .css-selector {
+    color: #8254a8;
+  }
+  
+  .css-property {
+    color: #567494;
+  }
+  
+  .css-property-value {
+    color: #db3b3b;
+  }

@@ -1,0 +1,252 @@
+body {
+    margin: 130px 0 0;
+    background-color: #fff;
+    box-sizing: border-box;
+  }
+  
+  #container {
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  #header {
+    min-height: 130px;
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 10px 0 20px;
+    font-family: "Trirong", sans-serif;
+    background-color: #fff;
+    text-align: right;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  #header-img {
+    height: 120px;
+    float: left;
+    box-sizing: border-box;
+  }
+  
+  #nav-bar {
+    width: 70%;
+    display: inline-flex;
+    margin-top: 35px;
+    box-sizing: border-box;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .nav-link {
+    display: block;
+    text-decoration: none;
+    color: #5b4b42;
+    font-size: 22px;
+    line-height: 1.2;
+    white-space: nowrap;
+    box-sizing: border-box;
+    margin: 0 10px 20px 0;
+  }
+  
+  .nav-link:hover {
+    color: #9c867b;
+  }
+  
+  section {
+    color: #fff;
+    background-color: #9c867b;
+  }
+  
+  section:nth-of-type(2n) {
+    color: #5b4b42;
+    background-color: #fff;
+  }
+  
+  #about {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  #sales {
+    text-align: center;
+  }
+  
+  #items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .item {
+    display: inline-block;
+    min-width: 300px;
+    width: 30%;
+    margin: 20px;
+    text-align: center;
+    border: 1px solid #9c867b;
+    box-sizing: border-box;
+  }
+  
+  .item:first-of-type {
+    margin-left: 0;
+  }
+  
+  .item:last-of-type {
+    margin-right: 0;
+  }
+  
+  .item img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  #contact_us {
+    text-align: center;
+  }
+  
+  #form {
+    display: inline-block;
+    margin: 30px auto;
+    background-color: #fff;
+    color: #5b4b42;
+    padding: 15px 40px;
+  }
+  
+  #form label {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-right: 10px;
+  }
+  
+  #form input {
+    line-height: 1.5;
+    font-size: 16px;
+    
+    outline: none;
+    border-radius: 4px;
+  }
+  
+  #form input:not(#submit) {
+    padding: 2px 4px;
+    min-width: 240px;
+    margin-bottom: 20px;
+    color: #5b4b42;
+    border: 2px solid #9c867b;
+  }
+  
+  #form input:not(#submit):focus {
+    border: 2px solid #98a67b;
+  }
+  
+  #submit {
+    margin: 10px auto 40px;
+    padding: 6px 20px;
+    color: #fff;
+    background-color: #5b4b42;
+    border: none;
+    transition-duration: 0.4s;
+  }
+  
+  #submit:hover {
+    cursor: pointer;
+    background-color: #98a67b;
+  }
+  
+  .describtion-about {
+    margin: 0 auto;
+    padding: 30px 40px;
+    width: calc(64% - 80px);
+  }
+  
+  .img-wrap {
+    width: 36%;
+    max-width: 560px;
+    overflow: hidden;
+  }
+  
+  #about-img {
+    width: 100%;
+  }
+  
+  .describtion-sales {
+    margin: 40px auto; 
+  }
+  
+  h1 {
+    font-size: 32px;
+    line-height: 1.4;
+  }
+  
+  p {
+    font-size: 26px;
+    line-height: 1.4;
+  }
+  
+  #video {
+    height: calc(100vw*360/640);
+    max-height: 540px;
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  @media only screen and (max-width: 900px) {
+    h1 {
+      font-size: 28px;
+    }
+  
+    p {
+      font-size: 22px;
+    }
+  
+    .describtion-about {
+      padding: 0 20px;
+      width: calc(60% - 40px);
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    #video,
+    #header-img {
+      margin: 0 auto;
+      float: none;
+    }
+  
+    #nav-bar {
+      width: 100%;
+      margin-top: 0;
+    }
+  
+    .nav-link {
+      font-size: 16px;
+    }
+  
+    .img-wrap { 
+      width: 100%;
+      max-width: 100%;
+      max-height: 400px;
+    }
+  
+    .describtion-sales {
+      margin: 20px auto; 
+    }
+  
+    h1 {
+      font-size: 30px;
+    }
+  
+    p {
+      font-size: 20px;
+    }
+  
+    .describtion-about {
+        margin: 0;
+        padding: 0 20px;
+        width: 100%;
+      }
+  }

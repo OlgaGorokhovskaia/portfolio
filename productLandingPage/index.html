@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia|Trirong">
+    <title>Product Landing Page</title>
+  </head>
+  <body>
+      <header id="header">
+        <img id="header-img"  src="./images/logo.png" alt="logo"/>
+        <nav id="nav-bar">
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#pricing">Pricing</a>
+          <a class="nav-link" href="#contact_us">Contact us</a>
+          <a class="nav-link" href="#sales">Sales</a>
+        </nav>
+      </header>
+      <main id="container">
+        <section id="about">
+          <div class="img-wrap">
+            <img id="about-img" src="./images/clothes.jpeg" alt="clothes"/>
+          </div>
+          <div class="describtion-about">
+            <h1>STYLIST SERVICES</h1>
+            <p>Every woman should be able to look fashionable, natural and modern, and at the same time emphasize her individuality. Our task is to preserve your originality and competently combine style.</p>
+          </div>
+        </section>
+        <section id="pricing">
+          <div id="items">
+            <div class="item">
+              <h1>Personal Shopping</h1>
+              <img id="shopping-img" width="320px" src="./images/shopping.jpeg" alt="shopping"/>
+              <div>I’ll offer up a variety of styling suggestions for your items to maximize efficiency and your budget</div>
+             <h1>$250</h1>
+            </div>
+            <div class="item">
+              <h1>Bridal Edit</h1>
+              <img id="bridal-img"  src="./images/accessories.jpeg" alt="accessories"/>
+              <div>We will discuss the events and your vision in detail so I can tailor your looks accordingly</div>
+              <h1>$150</h1>
+            </div>
+            <div class="item">
+              <h1>Seasonal Style Guide</h1>
+              <img id="guide-img" width="320px" src="./images/magazine.jpg" alt="magazine"/>
+              <div>15 page comprehensive guide to the season’s top trends and key items</div>
+             <h1>$30</h1>
+            </div>
+          </div>
+        </section>
+        <section id="contact_us">
+          <form id="form" action="https://www.freecodecamp.com/email-submit">
+          <p>Create a request and our stylist will contact you!</p>
+            <label for="fullname">Name:</label>
+            <input id="fullname" name="fullname" type="text" placeholder="Enter your name" />
+            <br />
+            <label for="email">Email:</label>
+            <input id="email" name="email" type="email" placeholder="Enter your email address" />
+            <br />
+            <input id="submit" type="submit" value="Get started" />
+          </form>
+        </section>
+        <section id="sales">
+          <div class="describtion-sales">
+            <h1>SALE 40%</h1>
+            <p>Our Lowest Price of the Season</p>
+          </div>
+            <iframe id="video" title="video" src="https://player.vimeo.com/video/536753444?h=c99f672998" frameborder="0" allowfullscreen><\iframe>
+        </section>
+      </main>
+  </body>
+</html>
