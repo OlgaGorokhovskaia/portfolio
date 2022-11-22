@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@600&family=IBM+Plex+Sans+Devanagari&family=Roboto+Serif:opsz,wght@8..144,500&display=swap');
+
+:root {
+  --link-color: #22a366;
+  --bg-color: #000;
+  --text-color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  padding: 4rem 2rem 2rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 6em 0 4em;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 2.4rem;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 1.8rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+#navbar {
+  width: 100%;
+  background-color: var(--bg-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#nav-list {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#nav-list > li {
+  font-size: 1.4em;
+  padding: 1.2rem;
+  color: #fff;
+}
+
+#nav-list a {
+  color: #fff;
+  transition: color .3s ease-in-out;
+}
+
+#nav-list a:hover {
+  color: var(--link-color);
+}
+
+#intro > p {
+  margin-bottom: 1.2rem;
+}
+
+#stack-icons img {
+  width: 4rem;
+  height: 4rem;
+}
+
+#projects ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+@media (max-width: 680px) {
+  section {
+    padding: 6em 0 0;
+  }
+
+  #projects ul {
+      grid-template-columns: 1fr;
+  }
+
+  #stack-icons img {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+}
+
+.project-tile {
+  position: relative;
+  text-align: center;
+  height: 320px;
+  width: 100%;
+  background-color: #444;
+  transition: background-color .3s ease-in-out;
+}
+
+.project-tile:hover {
+  background-color: var(--link-color);
+}
+
+.preview {
+  width: 100%;
+  height: calc(100% - 4rem);
+  object-position: center top;
+  object-fit: cover;
+  margin-bottom: 0.6rem;
+}
+
+.description {
+  font-size: 1em;
+  line-height: 1.6rem;
+  font-family: 'IBM Plex Sans Devanagari', sans-serif;
+}
+
+.project-tile .link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#contacts-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  margin: 1rem;
+  color: var(--text-color);
+  transition: color .3s ease-in-out;
+}
+
+.contact-link:hover {
+  color: var(--link-color);
+}
+
+.contact-link > img {
+  width: 2em;
+  margin-right: 8px;
+  border-radius: 50%;
+  background-color: var(--text-color);
+  transition: background-color .3s ease-in-out;
+}
+
+.contact-link:hover > img {
+  background-color: var(--link-color);
+}
+
