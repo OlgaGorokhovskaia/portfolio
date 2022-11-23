@@ -1,5 +1,3 @@
-# Product Landing Page
-
-There is an example of a simple business card page for stylist services.
+# Portfolio
 
 ![screenshot](./images/screenshot.png)
